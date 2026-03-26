@@ -1,0 +1,27 @@
+buildscript {
+    ext {
+        set("buildToolsVersion", "34.0.0")
+        set("minSdkVersion", 26)
+        set("compileSdkVersion", 34)
+        set("targetSdkVersion", 34)
+        set("kotlinVersion", "1.9.22")
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.2.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
